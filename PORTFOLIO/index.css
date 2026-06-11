@@ -614,6 +614,7 @@
     .orbit-ring-2 { width: 240px; height: 240px; }
     .orbit-ring-3 { width: 300px; height: 300px; }
     .skills-layout { grid-template-columns: repeat(2, 1fr); }
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
     .edu-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
@@ -681,6 +682,7 @@
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .about-photo-wrap { max-width: 260px; margin: 0 auto; }
     .skills-layout { grid-template-columns: repeat(2, 1fr); }
+    .projects-grid { grid-template-columns: 1fr; }
     .edu-grid { grid-template-columns: 1fr; }
     .stats-strip { padding: 1.5rem; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
     .stat-divider { display: none; }
@@ -746,3 +748,35 @@
     line-height: 1.8; 
     margin-top: 1.25rem;
   }
+
+ /* ── PROJECTS ── */
+  .projects { background: var(--near-black); }
+  .projects-filter { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .filter-btn { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 2px; border: 1px solid var(--card-border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+  .filter-btn:hover { color: var(--off-white); border-color: var(--subtle); }
+  .filter-btn.active { background: var(--blue-accent); border-color: var(--blue-accent); color: var(--white); }
+  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .project-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
+  .project-card:hover { transform: translateY(-5px); border-color: rgba(33,150,243,0.3); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+  .project-card.hidden { display: none; }
+  .proj-thumb { height: 150px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .proj-thumb-icon { font-size: 2.8rem; opacity: 0.55; position: relative; z-index: 1; }
+  .proj-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, var(--card-bg)); }
+  .proj-status { position: absolute; top: 0.75rem; right: 0.75rem; z-index: 2; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.22rem 0.55rem; border-radius: 20px; }
+  .status-live { background: rgba(76,175,80,0.15); border: 1px solid rgba(76,175,80,0.3); color: #81c784; }
+  .status-wip  { background: rgba(255,183,77,0.1);  border: 1px solid rgba(255,183,77,0.25); color: #ffb74d; }
+  .status-done { background: rgba(33,150,243,0.1);  border: 1px solid rgba(33,150,243,0.25); color: var(--blue-glow); }
+  .proj-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+  .proj-cat { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-accent); margin-bottom: 0.4rem; }
+  .proj-title { font-family: 'Syne', sans-serif; font-size: 0.98rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; line-height: 1.25; }
+  .proj-desc { font-size: 0.8rem; line-height: 1.7; color: var(--muted); flex: 1; margin-bottom: 1rem; }
+  .proj-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 1rem; }
+  .proj-tag { font-size: 0.62rem; font-weight: 500; padding: 0.18rem 0.5rem; border-radius: 2px; background: rgba(33,150,243,0.07); border: 1px solid rgba(33,150,243,0.12); color: var(--muted); }
+  .proj-links { display: flex; gap: 0.6rem; margin-top: auto; }
+  .proj-link { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.35rem 0.8rem; border-radius: 2px; text-decoration: none; transition: all 0.2s; }
+  .proj-link.primary { background: var(--blue-bright); color: var(--white); border: 1px solid transparent; }
+  .proj-link.primary:hover { background: var(--blue-accent); }
+  .proj-link.ghost { background: transparent; color: var(--muted); border: 1px solid var(--card-border); }
+  .proj-link.ghost:hover { border-color: var(--blue-accent); color: var(--blue-accent); }
+  .proj-link.casestudy { background: transparent; color: var(--blue-glow); border: 1px solid rgba(100,181,246,0.3); }
+  .proj-link.casestudy:hover { background: rgba(100,181,246,0.08); border-color: var(--blue-glow); color: var(--white); }
