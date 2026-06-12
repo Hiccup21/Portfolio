@@ -101,8 +101,8 @@ const PROJECTS = [
     category: "Full Stack",
     desc: "AI-powered student research assistant integrating AWS Lambda, API Gateway, and the Anthropic Claude API to answer research questions intelligently.",
     tags: ["AWS Lambda", "API Gateway", "Anthropic API", "HTML/CSS/JS", "Python"],
-    status: "In progress",
-    statusLabel: "In progress",
+    status: "wip",
+    statusLabel: "In Progress",
     icon: "🧠",
     liveUrl: "#",
     casestudyUrl: "#",
@@ -171,7 +171,7 @@ PROJECTS.forEach(p => {
       <div class="proj-title">${p.title}</div>
       <p class="proj-desc">${p.desc}</p>
       <div class="proj-tags">${p.tags.map(t => `<span class="proj-tag">${t}</span>`).join("")}</div>
-      <div class="proj-links">${liveBtn}${casestudyBtn}${codeBtn}</div>
+      <div class="proj-links" style="flex-wrap:wrap;">${liveBtn}${casestudyBtn}${codeBtn}</div>
     </div>`;
   grid.appendChild(card);
 });

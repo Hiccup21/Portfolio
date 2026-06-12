@@ -780,3 +780,39 @@
   .proj-link.ghost:hover { border-color: var(--blue-accent); color: var(--blue-accent); }
   .proj-link.casestudy { background: transparent; color: var(--blue-glow); border: 1px solid rgba(100,181,246,0.3); }
   .proj-link.casestudy:hover { background: rgba(100,181,246,0.08); border-color: var(--blue-glow); color: var(--white); }
+
+  /* In Progress status fix — covers "In progress" as a class */
+  .status-In { background: rgba(255,183,77,0.1); border: 1px solid rgba(255,183,77,0.25); color: #ffb74d; }
+
+  /* proj-links wrapping on small cards */
+  .proj-links { flex-wrap: wrap; }
+
+  /* ── Projects responsive overrides ── */
+
+  /* Tablet landscape — already handled above (repeat(2,1fr)) */
+
+  /* Mobile large ≤640px: single column, tighter cards */
+  @media (max-width: 640px) {
+    .projects-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .proj-body { padding: 1rem; }
+    .proj-thumb { height: 120px; }
+    .proj-thumb-icon { font-size: 2.2rem; }
+    .proj-links { gap: 0.4rem; }
+    .proj-link { font-size: 0.65rem; padding: 0.32rem 0.65rem; }
+    .projects-filter { gap: 0.4rem; }
+    .filter-btn { font-size: 0.66rem; padding: 0.35rem 0.75rem; }
+  }
+
+  /* Mobile small ≤400px */
+  @media (max-width: 400px) {
+    .projects-grid { gap: 0.75rem; }
+    .proj-title { font-size: 0.9rem; }
+    .proj-desc { font-size: 0.76rem; }
+    .proj-link { padding: 0.3rem 0.55rem; font-size: 0.62rem; }
+  }
+
+  /* Touch devices — remove hover lift on project cards */
+  @media (hover: none) and (pointer: coarse) {
+    .project-card:hover { transform: none; box-shadow: none; border-color: var(--card-border); }
+    .proj-link { min-height: 36px; display: inline-flex; align-items: center; justify-content: center; }
+  }
