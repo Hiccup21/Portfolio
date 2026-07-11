@@ -67,22 +67,6 @@ function toggleMenu() {
   document.getElementById('overlay').classList.toggle('open');
 }
 
-/* ============================================================
-   ✏️  TO ADD A NEW PROJECT — just add a new object to the
-   PROJECTS array below. The page builds the cards automatically.
-
-   Fields:
-   - title          : Project name
-   - category       : "Cloud" | "Frontend" | "Embedded" | "Full Stack"
-   - desc           : Short description (1–2 sentences)
-   - tags           : Array of tech strings
-   - status         : "live" | "wip" | "done"
-   - statusLabel    : "Live" | "In Progress" | "Completed"
-   - icon           : Emoji shown on the card thumbnail
-   - liveUrl        : Live demo URL  — use "#" if none
-   - casestudyUrl   : Case study URL — use "#" if none
-   - codeUrl        : GitHub repo URL — use "#" if none
-   ============================================================ */
 const PROJECTS = [
   {
     title: "Personal Portfolio Site",
@@ -97,16 +81,16 @@ const PROJECTS = [
     codeUrl: "https://github.com/Hiccup21/Portfolio"
   },
   {
-    title: "SmartPal AI — Student Research Assistant",
+    title: "Chatgum — A chat application",
     category: "Full Stack",
     desc: "AI-powered student research assistant integrating AWS Lambda, API Gateway, and the Anthropic Claude API to answer research questions intelligently.",
-    tags: ["AWS Lambda", "API Gateway", "Anthropic API", "HTML/CSS/JS", "Python"],
-    status: "wip",
-    statusLabel: "In Progress",
-    icon: "🧠",
-    liveUrl: "#",
+    tags: ["Python", "HTML/CSS/JS", "API Gateway", "OAUTH", "AWS Lambda", "DynamoDB", "S3", "CloudFront", "Terraform"],
+    status: "live",
+    statusLabel: "Live",
+    icon: "💬",
+    liveUrl: "https://chatgum.emmanuelcloud.space",
     casestudyUrl: "#",
-    codeUrl: "#"
+    codeUrl: "Private"
   },
   {
     title: "Serverless Document Converter",
