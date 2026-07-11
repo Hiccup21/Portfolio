@@ -83,13 +83,13 @@ const PROJECTS = [
   {
     title: "Chatgum — A chat application",
     category: "Full Stack",
-    desc: "AI-powered student research assistant integrating AWS Lambda, API Gateway, and the Anthropic Claude API to answer research questions intelligently.",
+    desc: "Real-time serverless chat app, Google OAuth, S3-backed media upload — built on a fully Terraform-managed AWS backend.",
     tags: ["Python", "HTML/CSS/JS", "API Gateway", "OAUTH", "AWS Lambda", "DynamoDB", "S3", "CloudFront", "Terraform"],
     status: "live",
     statusLabel: "Live",
     icon: "💬",
     liveUrl: "https://chatgum.emmanuelcloud.space",
-    casestudyUrl: "#",
+    casestudyUrl: "http://100.58.103.215/",
     codeUrl: "Private"
   },
   {
