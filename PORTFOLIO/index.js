@@ -89,7 +89,7 @@ const PROJECTS = [
     statusLabel: "Live",
     icon: "💬",
     liveUrl: "https://chatgum.emmanuelcloud.space",
-    casestudyUrl: "http://100.58.103.215/",
+    casestudyUrl: "http://34.195.77.225/",
     codeUrl: "Private"
   },
   {
