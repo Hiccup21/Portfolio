@@ -93,6 +93,18 @@ const PROJECTS = [
     codeUrl: "Private"
   },
   {
+    title: "DepthScope",
+    category: "3D Data Visualization",
+    desc: "A web-based 3D bathymetric visualizer rendering real GEBCO ocean floor data as interactive terrain, with a live USGS earthquake overlay for seismic context.",
+    tags: ["React", "Three.js", "WebGL", "Python", "Data Visualization", "GIS"],
+    status: "done",
+    statusLabel: "Completed",
+    icon: "waves",
+    liveUrl: "https://main.d1meumyxl3vsta.amplifyapp.com",
+    casestudyUrl: "#",
+    codeUrl: "https://github.com/Hiccup21/Depthscope"
+  },
+  {
     title: "Serverless Document Converter",
     category: "Cloud",
     desc: "Serverless document conversion system on AWS using S3 for storage, Lambda for processing, and API Gateway as the REST endpoint.",
